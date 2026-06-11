@@ -1,0 +1,607 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Professional Eportfolio of Aishwarya HS - Data Analyst, Data Scientist, and Key Account Manager. View projects, interactive dashboard, and career experience.">
+    <title>Aishwarya HS | Eportfolio</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Chart.js for Live Interactive Dashboard -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Header Navigation -->
+    <header class="header" id="main-header">
+        <div class="container header-container">
+            <a href="#home" class="logo" id="logo-link">
+                <span class="logo-symbol">&lt;</span>Aishwarya.<span>HS</span><span class="logo-symbol">/&gt;</span>
+            </a>
+            
+            <nav class="nav-menu" id="nav-navigation-menu">
+                <a href="#home" class="nav-link active" id="nav-home">Home</a>
+                <a href="#about" class="nav-link" id="nav-about">About</a>
+                <a href="#dashboard" class="nav-link" id="nav-dashboard">Data Showcase</a>
+                <a href="#experience" class="nav-link" id="nav-experience">Experience</a>
+                <a href="#skills" class="nav-link" id="nav-skills">Skills</a>
+                <a href="#certifications" class="nav-link" id="nav-certifications">Certifications</a>
+                <a href="#contact" class="nav-link" id="nav-contact">Contact</a>
+            </nav>
+
+            <div class="header-actions">
+                <button class="theme-toggle-btn" id="theme-toggle" aria-label="Toggle visual theme" title="Toggle Light/Dark Mode">
+                    <i class="fa-solid fa-moon" id="theme-toggle-icon"></i>
+                </button>
+                <button class="mobile-nav-toggle" id="mobile-nav-toggle-btn" aria-label="Toggle mobile menu">
+                    <i class="fa-solid fa-bars" id="mobile-toggle-icon"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Navigation Drawer -->
+    <div class="mobile-drawer" id="mobile-drawer-menu">
+        <div class="drawer-header">
+            <span class="drawer-logo">&lt;A.HS/&gt;</span>
+            <button class="drawer-close-btn" id="drawer-close" aria-label="Close mobile menu">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+        </div>
+        <nav class="drawer-links">
+            <a href="#home" class="drawer-link" id="drawer-nav-home">Home</a>
+            <a href="#about" class="drawer-link" id="drawer-nav-about">About</a>
+            <a href="#dashboard" class="drawer-link" id="drawer-nav-dashboard">Data Showcase</a>
+            <a href="#experience" class="drawer-link" id="drawer-nav-experience">Experience</a>
+            <a href="#skills" class="drawer-link" id="drawer-nav-skills">Skills</a>
+            <a href="#certifications" class="drawer-link" id="drawer-nav-certifications">Certifications</a>
+            <a href="#contact" class="drawer-link" id="drawer-nav-contact">Contact</a>
+        </nav>
+    </div>
+    <div class="drawer-overlay" id="drawer-menu-overlay"></div>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero-section" id="home">
+            <div class="hero-bg-glow" id="hero-glow-effect"></div>
+            <div class="container hero-container">
+                <div class="hero-content">
+                    <span class="hero-welcome">Welcome to my space</span>
+                    <h1 class="hero-title">Hi, I'm <span class="gradient-text">Aishwarya HS</span></h1>
+                    <h2 class="hero-subtitle">
+                        I am a <span class="typewriter-text" id="typewriter-target">Data Analyst</span><span class="cursor">|</span>
+                    </h2>
+                    <p class="hero-description">
+                        A dedicated student at REVA University merging business intelligence, client management, and data-driven insights to solve complex challenges and optimize workflows.
+                    </p>
+                    <div class="hero-ctas">
+                        <a href="#dashboard" class="btn btn-primary" id="hero-btn-work">
+                            Explore My Data Showcase <i class="fa-solid fa-chart-line"></i>
+                        </a>
+                        <a href="#contact" class="btn btn-secondary" id="hero-btn-contact">
+                            Get In Touch <i class="fa-solid fa-envelope"></i>
+                        </a>
+                    </div>
+                    <div class="hero-socials">
+                        <a href="https://www.linkedin.com/in/aishwarya-hs-b05762386" target="_blank" rel="noopener noreferrer" class="social-icon-link" id="hero-linkedin" title="LinkedIn Profile">
+                            <i class="fa-brands fa-linkedin-in"></i>
+                        </a>
+                        <a href="mailto:aishwarya260306@gmail.com" class="social-icon-link" id="hero-email-social" title="Send Email">
+                            <i class="fa-solid fa-envelope"></i>
+                        </a>
+                        <a href="tel:7483919044" class="social-icon-link" id="hero-phone-social" title="Call Me">
+                            <i class="fa-solid fa-phone"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="hero-image-wrapper">
+                    <div class="hero-image-border">
+                        <div class="hero-image-bg"></div>
+                        <img src="assets/avatar.png" alt="Aishwarya HS Abstract Representation" class="hero-profile-img" id="hero-avatar-image">
+                    </div>
+                </div>
+            </div>
+            <div class="scroll-down-indicator">
+                <a href="#about" id="scroll-to-about" aria-label="Scroll to About Section">
+                    <span class="mouse-icon">
+                        <span class="wheel"></span>
+                    </span>
+                    <span class="arrow-down-icon">
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </span>
+                </a>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section class="about-section section-padding" id="about">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tagline">Who I Am</span>
+                    <h2 class="section-title">About Me</h2>
+                    <div class="section-underline"></div>
+                </div>
+
+                <div class="about-grid">
+                    <div class="about-text-content">
+                        <h3 class="about-intro-title">Combining Technical Competence with Corporate Client Focus</h3>
+                        <p class="about-description">
+                            I am a student at <strong>REVA University</strong> (graduating class of 2025) with a strong foundation in Python programming, statistics, and machine learning models. Beyond standard academic coursework, I have gained substantial industry experience during my studies.
+                        </p>
+                        <p class="about-description">
+                            For the past <strong>5.5 years</strong>, I have worked with <strong>Haimi Consulting</strong>, moving into the role of Key Account Manager. This experience has honed my communication, client relationship management, and strategic business capabilities. Having one foot in the corporate client sector and the other in advanced data analysis allows me to bridge the gap between technical metrics and commercial goals.
+                        </p>
+                        <div class="about-key-stats">
+                            <div class="stat-card" id="stat-experience">
+                                <div class="stat-number">5.5+</div>
+                                <div class="stat-label">Years Corporate Exp</div>
+                            </div>
+                            <div class="stat-card" id="stat-university">
+                                <div class="stat-number">2025</div>
+                                <div class="stat-label">Graduation Year</div>
+                            </div>
+                            <div class="stat-card" id="stat-certifications">
+                                <div class="stat-number">2+</div>
+                                <div class="stat-label">Industry Certs</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="about-highlight-box glass-card">
+                        <h4 class="highlight-title"><i class="fa-solid fa-lightbulb"></i> My Core Philosophy</h4>
+                        <blockquote class="highlight-quote">
+                            "Data is only as valuable as the decisions it enables. By integrating rigorous data analysis with clear, client-focused relationship management, we transform raw metrics into actionable business growth."
+                        </blockquote>
+                        <div class="highlight-bullets">
+                            <div class="bullet-item">
+                                <span class="bullet-icon"><i class="fa-solid fa-check"></i></span>
+                                <span class="bullet-text"><strong>Analysis Driven:</strong> Skilled in Python, Jupyter, Pandas and SQL.</span>
+                            </div>
+                            <div class="bullet-item">
+                                <span class="bullet-icon"><i class="fa-solid fa-check"></i></span>
+                                <span class="bullet-text"><strong>Client Centric:</strong> 5.5 years in account growth and stakeholder alignment.</span>
+                            </div>
+                            <div class="bullet-item">
+                                <span class="bullet-icon"><i class="fa-solid fa-check"></i></span>
+                                <span class="bullet-text"><strong>Solutions Focused:</strong> Bridging technical details to business outcomes.</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Interactive Data Showcase (Dashboard) -->
+        <section class="dashboard-section section-padding" id="dashboard">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tagline">Showcasing Skills Visually</span>
+                    <h2 class="section-title">Interactive Data Showcase</h2>
+                    <div class="section-underline"></div>
+                </div>
+                
+                <p class="section-description text-center">
+                    As a data-focused professional, I believe in showing instead of telling. Explore my interactive dashboard below to see my skills and project concepts come to life visually. Toggle between the tabs to load different analytics datasets.
+                </p>
+
+                <div class="dashboard-wrapper glass-card">
+                    <div class="dashboard-header">
+                        <div class="dashboard-title-area">
+                            <span class="dashboard-live-badge"><span class="pulse-dot"></span> LIVE DECONSTRUCT</span>
+                            <h3 class="dashboard-main-title" id="dashboard-active-title">Customer Segment Distribution</h3>
+                        </div>
+                        <div class="dashboard-controls" id="dashboard-controls-tabs">
+                            <button class="dashboard-tab-btn active" id="btn-dataset-cust" data-dataset="customer">
+                                <i class="fa-solid fa-users"></i> Customer Segments
+                            </button>
+                            <button class="dashboard-tab-btn" id="btn-dataset-sales" data-dataset="sales">
+                                <i class="fa-solid fa-chart-line"></i> Sales Growth
+                            </button>
+                            <button class="dashboard-tab-btn" id="btn-dataset-skills" data-dataset="skills">
+                                <i class="fa-solid fa-brain"></i> Tool Expertise
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <div class="dashboard-body">
+                        <div class="chart-container">
+                            <canvas id="dashboard-chart"></canvas>
+                        </div>
+                        <div class="chart-insights" id="dashboard-insights-panel">
+                            <h4 class="insights-title"><i class="fa-solid fa-chart-pie"></i> Visualized Insights</h4>
+                            <div class="insights-content" id="insights-text-container">
+                                <!-- Dynamic Insights injected by JS -->
+                                <p>Loading analytical model insights...</p>
+                            </div>
+                            <div class="insights-footer">
+                                <span class="insights-badge"><i class="fa-brands fa-python"></i> Powered by Python / Pandas Mockup</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Experience Section -->
+        <section class="experience-section section-padding" id="experience">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tagline">My Professional Journey</span>
+                    <h2 class="section-title">Experience & Education</h2>
+                    <div class="section-underline"></div>
+                </div>
+
+                <div class="timeline">
+                    <!-- Experience 1 -->
+                    <div class="timeline-item left">
+                        <div class="timeline-badge"><i class="fa-solid fa-briefcase"></i></div>
+                        <div class="timeline-card glass-card">
+                            <div class="timeline-header">
+                                <span class="timeline-duration">Jan 2021 - Present (5.5 Years)</span>
+                                <h3 class="timeline-role">Key Account Manager</h3>
+                                <h4 class="timeline-company">Haimi Consulting</h4>
+                                <span class="timeline-location"><i class="fa-solid fa-location-dot"></i> Bengaluru, Karnataka, India</span>
+                            </div>
+                            <div class="timeline-body">
+                                <p>Managing relationships with high-value enterprise accounts, serving as the core link between technical analysis teams and clients. Spearheading client reviews and strategic business growth.</p>
+                                <ul class="timeline-bullets-list">
+                                    <li>Delivered key account performance audits, integrating client expectations with actual technical performance.</li>
+                                    <li>Led cross-functional communication, reducing SLA resolution times through clear technical reporting.</li>
+                                    <li>Utilized internal data trackers to discover upselling opportunities, resulting in sustained account growth.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Experience 2 -->
+                    <div class="timeline-item right">
+                        <div class="timeline-badge"><i class="fa-solid fa-graduation-cap"></i></div>
+                        <div class="timeline-card glass-card">
+                            <div class="timeline-header">
+                                <span class="timeline-duration">2021 - 2025</span>
+                                <h3 class="timeline-role">B.Tech / Student</h3>
+                                <h4 class="timeline-company">REVA University</h4>
+                                <span class="timeline-location"><i class="fa-solid fa-location-dot"></i> Bengaluru, Karnataka, India</span>
+                            </div>
+                            <div class="timeline-body">
+                                <p>Studying technical concepts in Computer Science and Engineering, with a specialized focus on Data Structures, Algorithms, Statistics, and Machine Learning.</p>
+                                <ul class="timeline-bullets-list">
+                                    <li>Completed academic projects implementing regression models, classification models, and neural networks.</li>
+                                    <li>Active in university tech communities, specializing in Python scripting and Jupyter Notebook environments.</li>
+                                    <li>Merged academic data science coursework with practical corporate account experience to create analytical business proposals.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Experience 3 -->
+                    <div class="timeline-item left">
+                        <div class="timeline-badge"><i class="fa-solid fa-briefcase"></i></div>
+                        <div class="timeline-card glass-card">
+                            <div class="timeline-header">
+                                <span class="timeline-duration">March 2024 - July 2024 (5 Months)</span>
+                                <h3 class="timeline-role">Account Manager</h3>
+                                <h4 class="timeline-company">Haimi Consulting</h4>
+                                <span class="timeline-location"><i class="fa-solid fa-location-dot"></i> Bengaluru, Karnataka, India</span>
+                            </div>
+                            <div class="timeline-body">
+                                <p>Supported client communication projects and managed operational aspects of key client accounts during a period of organizational expansion.</p>
+                                <ul class="timeline-bullets-list">
+                                    <li>Analyzed customer satisfaction metrics using Python scripts to map areas of improvement in service delivery.</li>
+                                    <li>Compiled structured client feedback and generated Jupyter Notebook analysis reports for senior executives.</li>
+                                    <li>Established a streamlined tracking pipeline for client queries, reducing delay times by 20%.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section class="skills-section section-padding" id="skills">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tagline">What I Do Best</span>
+                    <h2 class="section-title">Skills & Expertise</h2>
+                    <div class="section-underline"></div>
+                </div>
+
+                <div class="skills-grid">
+                    <!-- Technical Skills -->
+                    <div class="skills-category-card glass-card">
+                        <div class="skills-category-header">
+                            <div class="category-icon"><i class="fa-solid fa-code"></i></div>
+                            <h3 class="category-title">Technical Skills</h3>
+                        </div>
+                        <div class="skills-list">
+                            <div class="skill-item">
+                                <div class="skill-name-percent">
+                                    <span class="skill-label">Python (Data Science Stack)</span>
+                                    <span class="skill-percentage">90%</span>
+                                </div>
+                                <div class="skill-bar-wrapper">
+                                    <div class="skill-bar-fill" style="width: 90%;"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-name-percent">
+                                    <span class="skill-label">Jupyter Notebooks</span>
+                                    <span class="skill-percentage">95%</span>
+                                </div>
+                                <div class="skill-bar-wrapper">
+                                    <div class="skill-bar-fill" style="width: 95%;"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-name-percent">
+                                    <span class="skill-label">Data Analysis (Pandas, NumPy)</span>
+                                    <span class="skill-percentage">88%</span>
+                                </div>
+                                <div class="skill-bar-wrapper">
+                                    <div class="skill-bar-fill" style="width: 88%;"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-name-percent">
+                                    <span class="skill-label">SQL & Data Warehousing</span>
+                                    <span class="skill-percentage">80%</span>
+                                </div>
+                                <div class="skill-bar-wrapper">
+                                    <div class="skill-bar-fill" style="width: 80%;"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Domain Focus -->
+                    <div class="skills-category-card glass-card">
+                        <div class="skills-category-header">
+                            <div class="category-icon"><i class="fa-solid fa-brain"></i></div>
+                            <h3 class="category-title">Domain Expertise</h3>
+                        </div>
+                        <div class="skills-list">
+                            <div class="skill-item">
+                                <div class="skill-name-percent">
+                                    <span class="skill-label">Exploratory Data Analysis</span>
+                                    <span class="skill-percentage">92%</span>
+                                </div>
+                                <div class="skill-bar-wrapper">
+                                    <div class="skill-bar-fill" style="width: 92%;"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-name-percent">
+                                    <span class="skill-label">Predictive Modelling</span>
+                                    <span class="skill-percentage">78%</span>
+                                </div>
+                                <div class="skill-bar-wrapper">
+                                    <div class="skill-bar-fill" style="width: 78%;"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-name-percent">
+                                    <span class="skill-label">Statistical Hypothesis Testing</span>
+                                    <span class="skill-percentage">83%</span>
+                                </div>
+                                <div class="skill-bar-wrapper">
+                                    <div class="skill-bar-fill" style="width: 83%;"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-name-percent">
+                                    <span class="skill-label">Data Visualization (Matplotlib/Seaborn)</span>
+                                    <span class="skill-percentage">85%</span>
+                                </div>
+                                <div class="skill-bar-wrapper">
+                                    <div class="skill-bar-fill" style="width: 85%;"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Client/Professional Skills -->
+                    <div class="skills-category-card glass-card">
+                        <div class="skills-category-header">
+                            <div class="category-icon"><i class="fa-solid fa-handshake"></i></div>
+                            <h3 class="category-title">Professional & Client Relations</h3>
+                        </div>
+                        <div class="skills-list">
+                            <div class="skill-item">
+                                <div class="skill-name-percent">
+                                    <span class="skill-label">Key Account Growth & Management</span>
+                                    <span class="skill-percentage">95%</span>
+                                </div>
+                                <div class="skill-bar-wrapper">
+                                    <div class="skill-bar-fill" style="width: 95%;"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-name-percent">
+                                    <span class="skill-label">Client Communication & Presentation</span>
+                                    <span class="skill-percentage">92%</span>
+                                </div>
+                                <div class="skill-bar-wrapper">
+                                    <div class="skill-bar-fill" style="width: 92%;"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-name-percent">
+                                    <span class="skill-label">Requirements Gathering & Auditing</span>
+                                    <span class="skill-percentage">89%</span>
+                                </div>
+                                <div class="skill-bar-wrapper">
+                                    <div class="skill-bar-fill" style="width: 89%;"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <div class="skill-name-percent">
+                                    <span class="skill-label">Stakeholder Alignment</span>
+                                    <span class="skill-percentage">90%</span>
+                                </div>
+                                <div class="skill-bar-wrapper">
+                                    <div class="skill-bar-fill" style="width: 90%;"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Certifications Section -->
+        <section class="certifications-section section-padding" id="certifications">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tagline">Academic & Professional Credentials</span>
+                    <h2 class="section-title">Certifications</h2>
+                    <div class="section-underline"></div>
+                </div>
+
+                <div class="certs-grid">
+                    <!-- Cert 1 -->
+                    <div class="cert-card glass-card" id="cert-python-ds">
+                        <div class="cert-icon-wrapper">
+                            <i class="fa-brands fa-python"></i>
+                        </div>
+                        <h3 class="cert-name">Python for Data Science</h3>
+                        <p class="cert-issuer">Completed Industry Certification</p>
+                        <div class="cert-meta">
+                            <span class="cert-status"><i class="fa-solid fa-circle-check"></i> Verified credential</span>
+                            <span class="cert-skill-tag">Python & Data structures</span>
+                        </div>
+                    </div>
+
+                    <!-- Cert 2 -->
+                    <div class="cert-card glass-card" id="cert-data-analysis">
+                        <div class="cert-icon-wrapper">
+                            <i class="fa-solid fa-magnifying-glass-chart"></i>
+                        </div>
+                        <h3 class="cert-name">Data Analysis Using Python</h3>
+                        <p class="cert-issuer">Completed Industry Certification</p>
+                        <div class="cert-meta">
+                            <span class="cert-status"><i class="fa-solid fa-circle-check"></i> Verified credential</span>
+                            <span class="cert-skill-tag">Pandas & Data Wrangling</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section class="contact-section section-padding" id="contact">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tagline">Start a Conversation</span>
+                    <h2 class="section-title">Get In Touch</h2>
+                    <div class="section-underline"></div>
+                </div>
+
+                <div class="contact-grid">
+                    <!-- Contact Info -->
+                    <div class="contact-info-panel">
+                        <h3 class="contact-panel-title">Let's build something together</h3>
+                        <p class="contact-panel-description">
+                            Whether you want to discuss Python analytics projects, data dashboard integrations, or prospective client/account management opportunities—feel free to drop a message or reach out through my contacts.
+                        </p>
+
+                        <div class="contact-details-list">
+                            <div class="contact-detail-item">
+                                <div class="detail-icon"><i class="fa-solid fa-envelope"></i></div>
+                                <div class="detail-text-wrapper">
+                                    <span class="detail-label">Email Me</span>
+                                    <a href="mailto:aishwarya260306@gmail.com" class="detail-link" id="contact-email-link">aishwarya260306@gmail.com</a>
+                                </div>
+                            </div>
+                            <div class="contact-detail-item">
+                                <div class="detail-icon"><i class="fa-solid fa-phone"></i></div>
+                                <div class="detail-text-wrapper">
+                                    <span class="detail-label">Call Me</span>
+                                    <a href="tel:7483919044" class="detail-link" id="contact-phone-link">+91 7483919044</a>
+                                </div>
+                            </div>
+                            <div class="contact-detail-item">
+                                <div class="detail-icon"><i class="fa-brands fa-linkedin"></i></div>
+                                <div class="detail-text-wrapper">
+                                    <span class="detail-label">LinkedIn</span>
+                                    <a href="https://www.linkedin.com/in/aishwarya-hs-b05762386" target="_blank" rel="noopener noreferrer" class="detail-link" id="contact-linkedin-link">linkedin.com/in/aishwarya-hs</a>
+                                </div>
+                            </div>
+                            <div class="contact-detail-item">
+                                <div class="detail-icon"><i class="fa-solid fa-location-dot"></i></div>
+                                <div class="detail-text-wrapper">
+                                    <span class="detail-label">Location</span>
+                                    <span class="detail-text">Bengaluru, Karnataka, India</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Contact Form -->
+                    <div class="contact-form-panel glass-card">
+                        <form id="contact-form">
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="form-name">Full Name</label>
+                                    <input type="text" id="form-name" placeholder="John Doe" required autocomplete="name">
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="form-email">Email Address</label>
+                                    <input type="email" id="form-email" placeholder="john@example.com" required autocomplete="email">
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="form-subject">Subject</label>
+                                    <input type="text" id="form-subject" placeholder="Project Opportunity" required>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="form-message">Message</label>
+                                    <textarea id="form-message" rows="5" placeholder="Write your message here..." required></textarea>
+                                </div>
+                            </div>
+                            <button type="submit" class="btn btn-primary btn-block" id="btn-submit">
+                                Send Message <i class="fa-solid fa-paper-plane"></i>
+                            </button>
+                        </form>
+                        
+                        <!-- Toast Message Notification -->
+                        <div class="toast-notification" id="toast-success">
+                            <div class="toast-content">
+                                <i class="fa-solid fa-circle-check"></i>
+                                <span>Thank you! Your message was sent successfully.</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-container">
+            <p class="copyright-text">&copy; 2026 Aishwarya HS. All rights reserved.</p>
+            <div class="footer-links">
+                <a href="#home">Home</a>
+                <a href="#about">About</a>
+                <a href="#dashboard">Showcase</a>
+                <a href="#contact">Contact</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Custom JS -->
+    <script src="script.js"></script>
+</body>
+</html>
